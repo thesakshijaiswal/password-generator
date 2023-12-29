@@ -1,7 +1,11 @@
 body{
     font-family: Consolas;
     background: linear-gradient(to top, #2bc0ff 100%, #28535fd9 200%);
-    color: whitesmoke;   
+    color: whitesmoke;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
 }
 .pw-generator{
     border-radius: 20px;
@@ -74,7 +78,7 @@ button{
     font-size: 15px;
     transition: all 150ms ease;
     }
- 	button:active {
-		transform: translateY(-10%);
-		box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);
+ button:active {
+    transform: translateY(-10%);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.08);
   }
