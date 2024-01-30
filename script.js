@@ -41,6 +41,10 @@ const generatePassword=(password = "")=>{
         alert("Your password must contain more than 3 character");
       return;  
     }
+    if(totalChar.value>15){
+        alert("Your password must contain less than 15 character");
+      return;  
+    }
     passBox.innerText = truncateString(password,totalChar.value);
 }
 
