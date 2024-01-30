@@ -2,6 +2,8 @@ body{
     font-family: Consolas;
     background: linear-gradient(to top, #2bc0ff 100%, #28535fd9 200%);
     color: whitesmoke;
+    width: 100%;
+    height: 100vh;
     display:flex;
     flex-direction: column;
     justify-content:center;
