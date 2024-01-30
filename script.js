@@ -62,17 +62,17 @@ function truncateString(str,num) {
     }
 }
 
-function copyPassword() {
-    const tempElement = document.createElement("textarea");
-    const generatedPassword = passBox.innerText;
-   if(!generatedPassword) {
-       alert("No password generated");
-       return;
-   }
-   tempElement.value = generatedPassword;
-   document.body.appendChild(tempElement);
-   tempElement.select();
-   document.execCommand("copy");
-   tempElement.remove();
-   alert("password copied!")
+async function copyPassword() {
+  const generatedPassword = passBox.innerText;
+  if (!generatedPassword) {
+    alert("No password generated");
+    return;
+  }
+  try {
+    await navigator.clipboard.writeText(generatedPassword);
+    alert("Password copied!");
+  } catch (err) {
+    console.error("Unable to copy password to clipboard", err);
+    alert("Failed to copy password to clipboard, Please try again!");
+  }
 }
